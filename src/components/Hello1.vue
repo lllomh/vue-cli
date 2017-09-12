@@ -8,7 +8,8 @@
 </template>
 
 <script>
-  import {mapGetters, mapActions} from 'vuex';
+  import {mapGetters,mapActions } from 'vuex';
+
 
 
 export default {
@@ -18,7 +19,9 @@ export default {
   },
   computed: {...mapGetters(['gettersMsg'])},
   //对应getters.技术中的gettersMsg
-  methods: {...mapActions(['changeMsg'])}
+  methods: {
+    ...mapActions(['changeMsg'])
+    }
   //对应 Actions中changeMsg方法|| 映射this.changeMsg() 为 this.$store.dispatch('changeMsg')
 }
 </script>
